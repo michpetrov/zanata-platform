@@ -1,4 +1,5 @@
-import React from 'react'
+// @ts-check
+import React, {StatelessComponent} from 'react'
 import PropTypes from 'prop-types'
 import { ContentStates } from '../../constants/Options'
 import dateUtil from '../../utils/DateHelper'
@@ -14,6 +15,7 @@ const cssClass = {
   needswork: 'warning'
 }
 
+/** @type { StatelessComponent<{key?, dateLabel?, date?, wordCount?, selectedDay?, selectedContentState?, handleSelectedDayChanged?, props?}> } */
 const DayMatrix = ({
   dateLabel,
   date,

@@ -1,9 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-/**
- * @return {string}
- */
 const Icon = ({
   name,
   size,
