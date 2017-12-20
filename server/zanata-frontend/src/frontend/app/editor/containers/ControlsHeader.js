@@ -24,6 +24,7 @@ import {
 } from '../actions/header-actions'
 import { toggleSuggestions } from '../actions/suggestions-actions'
 
+/*::
 type props = {
   +toggleKeyboardShortcutsModal: () => void,
   +toggleGlossary: () => void,
@@ -43,6 +44,7 @@ type props = {
     getString: (string) => string
   }
 }
+*/
 
 /**
  * Header row with editor controls (filtering, paging, etc.)
@@ -63,7 +65,7 @@ export const ControlsHeader = ({
   toggleSuggestions,
   gettextCatalog
   /* eslint-enable react/prop-types */
-}: props) => {
+ }/*: props*/) => {
   return (
     /* eslint-disable max-len */
     <nav className="flex flex-wrapper u-bgHighest u-sPH-1-2 l--cf-of u-sizeHeight-1_1-2">
