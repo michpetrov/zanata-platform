@@ -22,7 +22,7 @@ import {
 } from '../actions/common-actions'
 import { keyBy } from 'lodash'
 
-/* eslint-enable max-len */
+/* eslint-disable max-len */
 /**
  *
  * @param listOfMatrices original server response
@@ -30,7 +30,7 @@ import { keyBy } from 'lodash'
  *   DateHelper.getDateRangeFromOption(string)
  * @returns {{label: string, date: string, totalApproved: number, totalTranslated: number, totalNeedsWork: number, totalActivity: number}[]}
  */
-/* eslint-disable max-len */
+/* eslint-enable max-len */
 const transformToTotalWordCountsForEachDay = (listOfMatrices, dateRange) => {
   let result = []
   let index = 0

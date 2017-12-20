@@ -1,5 +1,5 @@
 // @ts-check
-import React, {StatelessComponent} from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { ContentStates } from '../../constants/Options'
 import dateUtil from '../../utils/DateHelper'
@@ -15,7 +15,9 @@ const cssClass = {
   needswork: 'warning'
 }
 
-/** @type { StatelessComponent<{key?, dateLabel?, date?, wordCount?, selectedDay?, selectedContentState?, handleSelectedDayChanged?, props?}> } */
+/* eslint-disable max-len */
+/** @type { React.StatelessComponent<{key?, dateLabel?, date?, wordCount?, selectedDay?, selectedContentState?, handleSelectedDayChanged?, props?}> } */
+/* eslint-enable max-len */
 const DayMatrix = ({
   dateLabel,
   date,

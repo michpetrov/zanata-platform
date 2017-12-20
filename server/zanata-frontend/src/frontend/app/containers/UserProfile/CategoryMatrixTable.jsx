@@ -4,7 +4,9 @@ import PropTypes from 'prop-types'
 import { forOwn } from 'lodash'
 import CategoryItemMatrix from './CategoryItemMatrix'
 
+/* eslint-disable max-len */
 /** @type { React.StatelessComponent<{key, matrixData, category, categoryTitle, categoryName, props?}> } */
+/* eslint-enable max-len */
 const CategoryMatrixTable = ({
   matrixData,
   category,

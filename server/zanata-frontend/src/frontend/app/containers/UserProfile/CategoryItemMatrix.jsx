@@ -1,9 +1,11 @@
 // @ts-check
-import React, {StatelessComponent} from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { isEmpty, isUndefined } from 'lodash'
 
-/** @type { StatelessComponent<{itemTitle, itemName, wordCount, props?}> } */
+/* eslint-disable max-len */
+/** @type { React.StatelessComponent<{itemTitle, itemName, wordCount, props?}> } */
+/* eslint-enable max-len */
 const CategoryItemMatrix = ({
   itemTitle,
   itemName,

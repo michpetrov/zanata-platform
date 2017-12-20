@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Loader } from '../../components'
 
+/* eslint-disable max-len */
 /** @type { React.StatelessComponent<{children, loading, loadingText, props?}> } */
 const LoaderText = ({
   children,
@@ -18,6 +19,7 @@ const LoaderText = ({
     </span>
   )
 }
+/* eslint-enable max-len */
 
 LoaderText.propTypes = {
   /**
