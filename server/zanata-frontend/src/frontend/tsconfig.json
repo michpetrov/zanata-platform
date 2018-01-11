@@ -7,11 +7,17 @@
         "jsx": "react",
         "module": "commonjs",
         "noEmit": true,
+        "outDir": "./dist/",
+        // TODO fix sourcemap problems with intl-messageformat
+        // "sourceMap": true,
         // first we need to clean up our types:
         // "strict": true,
         "target": "ES5"
     },
     "include": [
         "app/**/*"
+    ],
+    "exclude": [
+        "node_modules/**"
     ]
 }
