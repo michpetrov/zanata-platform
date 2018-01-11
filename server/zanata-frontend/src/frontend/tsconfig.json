@@ -4,7 +4,7 @@
         // https://github.com/Microsoft/TypeScript-React-Starter/issues/8
         "allowSyntheticDefaultImports": true,
         "checkJs": false,
-        "jsx": "react-native",
+        "jsx": "react",
         "module": "commonjs",
         "outDir": "./dist/",
         // TODO fix sourcemap problems with intl-messageformat

@@ -1,8 +1,9 @@
 {
   "collectCoverageFrom": [
-    "app/**/*.{js,jsx}",
+    "app/**/*.{js,jsx,ts,tsx}",
     "!**/node_modules/**",
-    "!app/**/*.story.js"
+    "!app/**/*.story.{js,ts}",
+    "!dist"
   ],
   "coverageReporters": [
     "cobertura",
@@ -14,7 +15,7 @@
     "\\.(css|less)$": "<rootDir>/__mocks__/cssMock.js"
   },
   "transform": {
-    ".*": "./node_modules/babel-jest"
+    "^.+\\.(jsx?|tsx?)$": "ts-jest"
   },
   "testPathIgnorePatterns": [
     "/node_modules/",
@@ -24,9 +25,12 @@
     "/node_modules",
     "/app"
   ],
+  "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
   "moduleFileExtensions": [
     "js",
     "jsx",
-    "json"
+    "json",
+    "ts",
+    "tsx"
   ]
 }
