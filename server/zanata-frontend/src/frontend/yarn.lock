@@ -232,6 +232,12 @@
   version "4.14.92"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.92.tgz#6e3cb0b71a1e12180a47a42a744e856c3ae99a57"
 
+"@types/moment-range@^3.0.4":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@types/moment-range/-/moment-range-3.0.4.tgz#1097b46a09b6c755505cc534518b206eccef048b"
+  dependencies:
+    moment "^2.18.1"
+
 "@types/node@*":
   version "9.3.0"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-9.3.0.tgz#3a129cda7c4e5df2409702626892cb4b96546dd5"
@@ -2948,7 +2954,7 @@ es6-shim@^0.35.3:
   version "0.35.3"
   resolved "https://registry.yarnpkg.com/es6-shim/-/es6-shim-0.35.3.tgz#9bfb7363feffff87a6cdb6cd93e405ec3c4b6f26"
 
-es6-symbol@3.1.1, es6-symbol@^3.1.1, es6-symbol@~3.1.1:
+es6-symbol@3.1.1, es6-symbol@^3.1.0, es6-symbol@^3.1.1, es6-symbol@~3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/es6-symbol/-/es6-symbol-3.1.1.tgz#bf00ef4fdab6ba1b46ecb7b629b4c7ed5715cc77"
   dependencies:
@@ -5885,17 +5891,19 @@ mobx@^3.1.9:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/mobx/-/mobx-3.3.1.tgz#c38fc1a287a0dda3f5d4b85efe1137fedd9dcdf0"
 
-moment-range@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/moment-range/-/moment-range-2.2.0.tgz#b02575778a4ac50a65777939f5c5d757f83fcd85"
-
-moment@2.13.0:
-  version "2.13.0"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.13.0.tgz#24162d99521e6d40f99ae6939e806d2139eaac52"
+moment-range@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/moment-range/-/moment-range-3.1.0.tgz#96ab2245939b1c0991f0e4128079843218415c29"
+  dependencies:
+    es6-symbol "^3.1.0"
 
 moment@^2.10.6, moment@^2.18.1, moment@^2.19.1:
   version "2.19.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.19.1.tgz#56da1a2d1cbf01d38b7e1afc31c10bcfa1929167"
+
+moment@^2.20.1:
+  version "2.20.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.20.1.tgz#d6eb1a46cbcc14a2b2f9434112c1ff8907f313fd"
 
 ms@2.0.0:
   version "2.0.0"
@@ -8614,12 +8622,6 @@ source-map@~0.1.33:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.1.43.tgz#c24bc146ca517c1471f5dacbe2571b2b7f9e3346"
   dependencies:
     amdefine ">=0.0.4"
-
-sourcemapped-stacktrace@^1.1.6:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/sourcemapped-stacktrace/-/sourcemapped-stacktrace-1.1.7.tgz#17e05374ff78b71a9d89ad3975a49f22725ba935"
-  dependencies:
-    source-map "0.5.6"
 
 space-separated-tokens@^1.0.0:
   version "1.1.1"

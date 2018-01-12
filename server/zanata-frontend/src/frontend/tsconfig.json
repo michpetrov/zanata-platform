@@ -5,6 +5,10 @@
         "allowSyntheticDefaultImports": true,
         "checkJs": false,
         "jsx": "react",
+        "lib": [
+            // We transpile to ES5 syntax, but we use babel-polyfill
+            "dom", "es6", "dom.iterable", "scripthost"
+        ],
         "module": "commonjs",
         "outDir": "./dist/",
         // TODO fix sourcemap problems with intl-messageformat
