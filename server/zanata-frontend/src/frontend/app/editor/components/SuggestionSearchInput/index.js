@@ -22,8 +22,8 @@
 import cx from 'classnames'
 import { Icon } from '../../../components'
 import IconButton from '../IconButton'
-import React from 'react'
-import PropTypes from 'prop-types'
+import * as React from 'react'
+import * as PropTypes from 'prop-types'
 
 /**
  * Styled text input that displays result count.

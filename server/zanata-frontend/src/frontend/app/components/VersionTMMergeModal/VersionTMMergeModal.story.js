@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import {storiesOf} from '@storybook/react'
 import {action, decorateAction} from '@storybook/addon-actions'
 import {Modal, Icon} from '../../components'
@@ -21,7 +21,7 @@ import {
   OverlayTrigger,
   Well
 } from 'react-bootstrap'
-import Toggle from 'react-toggle'
+import * as Toggle from 'react-toggle'
 
 const tooltip1 = (<Tooltip id='from-project-source' title='From project source'>
   Exact text matches from projects are used before exact matches in imported TM.

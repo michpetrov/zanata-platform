@@ -1,6 +1,6 @@
 // @ts-check
-import React from 'react'
-import PropTypes from 'prop-types'
+import * as React from 'react'
+import * as PropTypes from 'prop-types'
 import { isEmpty, isUndefined } from 'lodash'
 
 /* eslint-disable max-len */

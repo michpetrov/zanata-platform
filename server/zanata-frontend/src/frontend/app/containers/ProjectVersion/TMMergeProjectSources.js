@@ -1,5 +1,6 @@
-import React, {Component} from 'react'
-import PropTypes from 'prop-types'
+import * as React from 'react'
+import {Component} from 'react'
+import * as PropTypes from 'prop-types'
 import {InputGroup, Col, FormControl, OverlayTrigger, Radio, Well,
   Tooltip, Panel} from 'react-bootstrap'
 import {
@@ -7,7 +8,7 @@ import {
 } from '../../components'
 import ProjectVersionPanels from './ProjectVersionPanels'
 import TMMergeProjectTMOptions from './TMMergeProjectTMOptions'
-import Toggle from 'react-toggle'
+import * as Toggle from 'react-toggle'
 
 import {
   ProjectType, FromProjectVersionType

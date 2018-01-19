@@ -1,11 +1,12 @@
-import React, {Component} from 'react'
-import PropTypes from 'prop-types'
+import * as React from 'react'
+import {Component} from 'react'
+import * as PropTypes from 'prop-types'
 import {Panel, Radio, OverlayTrigger,
   Tooltip, Col} from 'react-bootstrap'
 import {IGNORE_CHECK, FUZZY, REJECT} from '../../utils/EnumValueUtils'
 import {CopyLabel} from './TMMergeOptionsCommon'
 import Icon from '../../components/Icon'
-import Toggle from 'react-toggle'
+import * as Toggle from 'react-toggle'
 
 const tooltip = (
   <Tooltip id='copy-as-translated-TM' title='Copy as translated - TM'>

@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import * as React from 'react'
+import { Component } from 'react'
+import * as PropTypes from 'prop-types'
 import { Form, FormGroup, ControlLabel, Button, OverlayTrigger, Tooltip }
   from 'react-bootstrap'
 import { Icon, TextInput, SelectableDropdown } from '../../components'
-import Toggle from 'react-toggle'
+import * as Toggle from 'react-toggle'
 /**
  * Reject Translations Administration panel
  */

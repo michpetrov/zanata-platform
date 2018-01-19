@@ -1,9 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Icon } from '../../components'
+// @ts-check
+import * as React from 'react'
+import * as PropTypes from 'prop-types'
+import { Icon } from '../../components/index'
 
 /**
  * Icon styled and used in side bar menu. See NavItem for usage.
+ * TODO seems like it should be similar to:
+ * StatelessComponent<icon, size, props?>
+ * @type {React.StatelessComponent<any>}
  */
 const NavIcon = ({
   icon,
