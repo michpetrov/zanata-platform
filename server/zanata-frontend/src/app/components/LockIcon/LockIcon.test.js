@@ -4,7 +4,6 @@ import LockIcon from '.'
 import {Icon} from '../../components'
 
 /* global jest describe it expect */
-jest.disableAutomock()
 
 describe('LockIcon', () => {
   it('renders a LockIcon when given a READONLY status', () => {

@@ -1,6 +1,3 @@
-/* global jest describe expect it */
-jest.disableAutomock()
-
 import * as React from 'react'
 import * as ReactDOMServer from 'react-dom/server'
 import TestUtils from 'react-dom/test-utils'
@@ -8,6 +5,8 @@ import { mount } from 'enzyme'
 import { Pager } from '.'
 import { Icon } from '../../../components'
 import mockGettextCatalog from '../../../../__mocks__/mockAngularGettext'
+
+/* global jest describe expect it */
 
 const callback = () => {}
 

@@ -1,11 +1,5 @@
-import {
-  parseNPlurals,
-  prepareDocs,
-  prepareLocales,
-  prepareStats
-} from './Util'
+import { parseNPlurals, prepareDocs, prepareLocales, prepareStats} from './Util'
 
-jest.disableAutomock()
 
 describe('parseNPluralsTest', () => {
   it('can parse valid Plural-Forms string', () => {

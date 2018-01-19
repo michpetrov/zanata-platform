@@ -1,5 +1,4 @@
 /* global jest describe it expect */
-jest.disableAutomock()
 
 import * as React from 'react'
 import ReactDOM from 'react-dom'
