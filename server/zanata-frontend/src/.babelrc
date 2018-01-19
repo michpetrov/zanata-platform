@@ -21,7 +21,7 @@
     "test": {
       "presets": [
         "react",
-        ["env", { "modules": false}],
+        "env",
         "stage-3"
       ],
       "plugins": ["transform-class-properties"]
