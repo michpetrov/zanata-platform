@@ -1,15 +1,23 @@
 {
+    "awesomeTypescriptLoaderOptions": {
+        "errorsAsWarnings": true,
+        "reportFiles": [
+            "app/**/*.{js,jsx,ts,tsx}"
+        ],
+        "useBabel": true,
+        "useCache": true
+    },
     "compilerOptions": {
         "allowJs": true,
         "checkJs": false,
-        "emit": true,
+        "emit": false,
         "jsx": "react",
         "lib": [
             // We transpile to ES5 syntax, but we use babel-polyfill
             "dom", "es6", "dom.iterable", "scripthost"
         ],
-        "module": "commonjs",
-        "outDir": "./dist/",
+        "module": "es2015",
+        "outDir": "./build/",
         // TODO fix sourcemap problems with intl-messageformat
         // "sourceMap": true,
         // first we need to clean up our types:
