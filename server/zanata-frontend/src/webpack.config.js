@@ -19,6 +19,7 @@ var postcssEsplit = require('postcss-esplit')
 var ReactIntlAggregatePlugin = require('react-intl-aggregate-webpack-plugin')
 var ReactIntlFlattenPlugin = require('react-intl-flatten-webpack-plugin')
 var ManifestPlugin = require('webpack-manifest-plugin')
+const { CheckerPlugin } = require('awesome-typescript-loader')
 
 /* Helper so we can use ternary with undefined to not specify a key */
 function dropUndef (obj) {
@@ -149,24 +150,21 @@ module.exports = function (env) {
          *  - mainly ES6/ES2015 syntax, and a few ES2016 things
          *  - configured in .babelrc
          */
-        {
-          test: /\.jsx?$/,
-          exclude: /node_modules/,
-          include: join(__dirname, 'app'),
-          loader: 'babel-loader',
-          options: {
-            babelrc: true
-          }
-        },
+        // {
+        //   test: /\.jsx?$/,
+        //   exclude: /node_modules/,
+        //   include: join(__dirname, 'app'),
+        //   loader: 'babel-loader',
+        //   options: {
+        //     babelrc: true
+        //   }
+        // },
 
         {
-          test: /\.tsx?$/,
+          test: /\.(j|t)sx?$/,
           exclude: /node_modules/,
           include: join(__dirname, 'app'),
-          loader: ['babel-loader', 'awesome-typescript-loader'],
-          options: {
-            babelrc: true
-          }
+          loader: 'awesome-typescript-loader'
         },
 
         /* Bundles all the css and allows use of various niceties, including
@@ -274,7 +272,7 @@ module.exports = function (env) {
     resolve: {
       /* Subdirectories to check while searching up tree for module
        * Default is ['', '.js'] */
-      extensions: ['.js', '.jsx', '.json', '.css', '.less']
+      extensions: ['.css', '.js', '.jsx', '.json', '.less', '.ts', '.tsx']
     },
 
     node: {
@@ -287,6 +285,6 @@ module.exports = function (env) {
     /* fail on first error */
     bail: fullBuild,
 
-    devtool: prod ? 'source-map' : 'eval'
+    devtool: prod ? 'source-map' : 'eval-source-map'
   })
 }
