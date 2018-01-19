@@ -143,6 +143,8 @@ module.exports = function (env) {
           }
         },
 
+        // TODO add tslint for tsx? files
+
         /* Allows use of newer javascript syntax.
          *  - mainly ES6/ES2015 syntax, and a few ES2016 things
          *  - configured in .babelrc
@@ -152,6 +154,16 @@ module.exports = function (env) {
           exclude: /node_modules/,
           include: join(__dirname, 'app'),
           loader: 'babel-loader',
+          options: {
+            babelrc: true
+          }
+        },
+
+        {
+          test: /\.tsx?$/,
+          exclude: /node_modules/,
+          include: join(__dirname, 'app'),
+          loader: ['babel-loader', 'awesome-typescript-loader'],
           options: {
             babelrc: true
           }

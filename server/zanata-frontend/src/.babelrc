@@ -1,6 +1,10 @@
 {
   // Allows use of modern JavaScript syntax and JSX
-  "presets": ["react", "env", "stage-3"],
+  "presets": [
+    "react",
+    ["env", { "modules": false}],
+    "stage-3"
+    ],
 
   // Extracts strings for translation.
   // Strings are output to .json files in the specified messagesDir
@@ -11,5 +15,16 @@
     }],
     // stage-2 plugins: (TODO remove them if practical)
     "transform-class-properties"
-  ]
+  ],
+
+  "env": {
+    "test": {
+      "presets": [
+        "react",
+        ["env", { "modules": false}],
+        "stage-3"
+      ],
+      "plugins": ["transform-class-properties"]
+    }
+  }
 }
