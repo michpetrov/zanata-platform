@@ -3,19 +3,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Loading from 'react-loading'
 
-/** @type { React.StatelessComponent<{className}> } */
-const Loader = ({ className = 'loader' }) => {
+interface LoaderProps {
+    className: string
+}
+
+const Loader: React.SFC<LoaderProps> = (props) => {
   return (
-    <span className={className}>
+    <span className={props.className}>
       <span>
         <Loading type='bubbles' color='#546677' />
       </span>
     </span>
   )
-}
-
-Loader.propTypes = {
-  className: PropTypes.string
 }
 
 export default Loader
