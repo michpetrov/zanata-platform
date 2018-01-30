@@ -1,6 +1,6 @@
 import { chain } from 'lodash'
 import cx from 'classnames'
-import React from 'react'
+import * as React from 'react'
 import * as PropTypes from 'prop-types'
 import {
   STATUS_UNTRANSLATED,

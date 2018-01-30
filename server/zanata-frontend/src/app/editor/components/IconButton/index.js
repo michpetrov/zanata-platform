@@ -1,6 +1,6 @@
 import Button from '../Button'
 import { Icon } from '../../../components'
-import React from 'react'
+import * as React from 'react'
 import * as PropTypes from 'prop-types'
 
 /**

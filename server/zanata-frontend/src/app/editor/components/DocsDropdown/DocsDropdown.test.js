@@ -1,5 +1,5 @@
 
-import React from 'react'
+import * as React from 'react'
 import * as ReactDOMServer from 'react-dom/server'
 import DocsDropdown from '.'
 import Dropdown from '../Dropdown'

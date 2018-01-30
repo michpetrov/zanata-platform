@@ -1,5 +1,5 @@
 
-import React from 'react'
+import * as React from 'react'
 import * as ReactDOMServer from 'react-dom/server'
 import SelectableDropdown from '.'
 import {MenuItem, DropdownButton} from 'react-bootstrap'

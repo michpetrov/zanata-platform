@@ -1,6 +1,6 @@
 /* global jest describe expect it */
 
-import React from 'react'
+import * as React from 'react'
 import * as ReactDOMServer from 'react-dom/server'
 import * as TestUtils from 'react-dom/test-utils'
 import UiLanguageDropdown from '.'

@@ -19,7 +19,7 @@
  * site: http://www.fsf.org.
  */
 
-import React from 'react'
+import * as React from 'react'
 import { Component } from 'react'
 import * as PropTypes from 'prop-types'
 import {FormattedMessage} from 'react-intl'

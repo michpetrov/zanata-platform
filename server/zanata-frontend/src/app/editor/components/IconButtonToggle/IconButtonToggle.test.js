@@ -1,5 +1,5 @@
 
-import React from 'react'
+import * as React from 'react'
 import * as ReactDOMServer from 'react-dom/server'
 import IconButton from '../IconButton'
 import IconButtonToggle from '.'
