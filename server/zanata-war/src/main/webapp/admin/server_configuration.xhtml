@@ -319,8 +319,9 @@
 
         <h:commandButton value="#{msgs['jsf.Save']}" id="save" styleClass="button--primary"
             action="#{serverConfigurationBean.update}"/>
-        <h:button outcome="/admin/home" value="#{msgs['jsf.Cancel']}" id="cancel"
-            styleClass="button button--link l--push-left-half"/>
+        <a id="cancel" href="/admin/home" class="button button--link l--push-left-quarter l--pad-v-quarter l--pad-h-half">
+          #{msgs['jsf.Cancel']}
+        </a>
       </h:form>
     </div>
   </div>

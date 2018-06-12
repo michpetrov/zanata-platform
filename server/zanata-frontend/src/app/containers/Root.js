@@ -11,6 +11,7 @@ import Explore from '../containers/Explore'
 import UserProfile from '../containers/UserProfile'
 import { user } from '../config'
 import AdminReview from '../containers/Admin/Review'
+import { ServerSettings } from '../containers/Admin/ServerSettings'
 import Admin from '../containers/Admin/index'
 
 export default class Root extends Component {
@@ -38,6 +39,7 @@ export default class Root extends Component {
               component={ProjectVersion} />
             <Route path='admin/home' component={Admin} />
             <Route path='admin/review' component={AdminReview} />
+            <Route path='admin/server_settings' component={ServerSettings} />
             <Route path='profile/view/:username' component={UserProfile} />
             <Redirect from='profile' to={`profile/view/${username}`} />
           </Route>
