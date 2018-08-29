@@ -131,19 +131,19 @@ public class OptionsUtilTest {
         verify(config).getBoolean("defaults.batchMode", null);
     }
 
-    @Test
-    public void applyUserConfigTest() {
-        opts.setDebug(false);
-        opts.setErrors(false);
-        opts.setQuiet(false);
-        opts.setInteractiveMode(false);
-
-        HierarchicalINIConfiguration config =
-                Mockito.mock(HierarchicalINIConfiguration.class);
-        OptionsUtil.applyUserConfig(opts, config);
-
-        verifyZeroInteractions(config);
-    }
+//    @Test
+//    public void applyUserConfigTest() {
+//        opts.setDebug(false);
+//        opts.setErrors(false);
+//        opts.setQuiet(false);
+//        opts.setInteractiveMode(false);
+//
+//        HierarchicalINIConfiguration config =
+//                Mockito.mock(HierarchicalINIConfiguration.class);
+//        OptionsUtil.applyUserConfig(opts, config);
+//
+//        verifyZeroInteractions(config);
+//    }
 
     @Test
     public void willWarnUserIfRuleSeemsWrong() {

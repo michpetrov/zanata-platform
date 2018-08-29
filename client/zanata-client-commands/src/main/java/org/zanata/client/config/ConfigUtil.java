@@ -2,7 +2,9 @@ package org.zanata.client.config;
 
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -51,16 +53,27 @@ public class ConfigUtil {
         String suffix = ".url";
         DataConfiguration dataConfig = new DataConfiguration(config);
 
-        for (Iterator<String> iterator = dataConfig.getKeys(); iterator
-                .hasNext();) {
+        Set<String> keys = new HashSet<>();
+
+        for (Iterator<String> iterator = dataConfig.getKeys(); iterator.hasNext();) {
             String key = iterator.next();
             if (key.endsWith(suffix)) {
+                keys.add(key);
+            }
+        }
+
+        if (keys.size() == 1) {
+            String key = keys.iterator().next();
+            return key.substring(0, key.length() - suffix.length());
+        } else {
+            for (String key : keys) {
                 URL configURL = dataConfig.getURL(key);
                 if (equal(url, configURL)) {
                     return key.substring(0, key.length() - suffix.length());
                 }
             }
         }
+
         return null;
     }
 

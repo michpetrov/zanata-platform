@@ -1,7 +1,9 @@
 package org.zanata.client.commands;
 
 import java.io.File;
+import java.net.MalformedURLException;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.List;
 import java.util.Optional;
 
@@ -368,8 +370,8 @@ public class OptionsUtil {
             if (batchMode != null)
                 opts.setInteractiveMode(!batchMode);
         }
-        if ((opts.getUsername() == null || opts.getKey() == null)
-                && opts.getUrl() != null) {
+        if (opts.getUsername() == null || opts.getKey() == null
+                || opts.getUrl() == null) {
             SubnodeConfiguration servers = config.getSection("servers");
             if (servers != null) {
                 String prefix = ConfigUtil.findPrefix(servers, opts.getUrl());
@@ -380,6 +382,12 @@ public class OptionsUtil {
                     }
                     if (opts.getKey() == null) {
                         opts.setKey(servers.getString(prefix + ".key", null));
+                    }
+                    try {
+                    if (opts.getUrl() == null) {
+                        opts.setUrl(new URL(servers.getString(prefix + ".url", null)));
+                    }
+                    } catch (MalformedURLException e) {
                     }
                 }
             }
